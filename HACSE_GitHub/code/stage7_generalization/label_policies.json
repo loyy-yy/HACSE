@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "class_order": ["normal", "logical", "structural"],
+  "mvtec_ad": {
+    "logical_defects": {
+      "cable": ["cable_swap"],
+      "capsule": ["faulty_imprint"],
+      "transistor": ["misplaced"]
+    },
+    "default_anomaly_group": "structural",
+    "policy_name": "LogicAL-literature-informed semantic regrouping",
+    "warning": "MVTec AD does not provide official logical/structural image labels. This mapping is a supplementary semantic regrouping and must not be presented as an official MVTec AD three-class protocol.",
+    "source": "https://openaccess.thecvf.com/content/CVPR2024W/VAND/html/Zhao_LogicAL_Towards_Logical_Anomaly_Synthesis_for_Unsupervised_Anomaly_Localization_CVPRW_2024_paper.html"
+  },
+  "visa": {
+    "logical_mask_classes": {
+      "pcb1": ["Missing"],
+      "pcb2": ["Missing"],
+      "pcb3": ["Missing"],
+      "pcb4": ["Missing", "Extra", "Wrong Place"]
+    },
+    "mixed_policy": "exclude",
+    "policy_name": "official-mask-class semantic regrouping",
+    "warning": "VisA officially provides defect classes, not logical/structural image labels. Only unambiguous component Missing/Extra/Wrong Place masks are mapped to logical; images mixing logical and structural mask classes are excluded from the strict three-class view.",
+    "source": "https://raw.githubusercontent.com/amazon-science/spot-diff/main/utils/id2class.py"
+  },
+  "vid_ad": {
+    "policy_name": "official logical-only labels",
+    "warning": "VID-AD contains normal and logical samples but no structural class. Report class-coverage-aware metrics only; never report it as a complete three-class benchmark.",
+    "source": "https://github.com/nkthiroto/VID-AD"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "output_dir": "outputs/manifests",
+  "datasets": [
+    {
+      "name": "mvtec_loco",
+      "adapter": "mvtec_loco",
+      "root": "D:/code/shiyan/复现/MVTec/mvtec_loco_anomaly_detection",
+      "enabled": true
+    },
+    {
+      "name": "mvtec_ad_semantic",
+      "adapter": "mvtec_ad",
+      "root": "D:/code/shiyan/复现/MVTec/mvtec_anomaly_detection",
+      "enabled": true
+    },
+    {
+      "name": "visa_semantic",
+      "adapter": "visa",
+      "root": "D:/code/shiyan/datasets/VisA",
+      "enabled": true
+    },
+    {
+      "name": "vid_ad",
+      "adapter": "vid_ad",
+      "root": "D:/code/shiyan/datasets/VID-AD_dataset",
+      "enabled": true
+    }
+  ]
+}

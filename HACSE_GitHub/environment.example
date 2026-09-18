@@ -1,0 +1,8 @@
+# Copy this file to environment.local and replace the example paths.
+# PowerShell users can set the same names with $env:NAME = 'value'.
+
+MVTEC_LOCO_ROOT=/path/to/mvtec_loco_anomaly_detection
+VISA_ROOT=/path/to/ViSA_pytorch/1cls
+VISA_RAW_TAR=/path/to/VisA_20220922.tar
+HF_HOME=/path/to/huggingface/cache
+
